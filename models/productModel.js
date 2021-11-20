@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const productSchema = new mongoose.Schema({
     name: {type: String, required: true},
     price: {type: Number, required: true},
-    quantity: {type: Number},
+    quantity: {type: Number,required: true},
     modifiedAt: {type: Date, default: Date.now}
 });
 
