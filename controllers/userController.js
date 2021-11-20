@@ -40,7 +40,7 @@ const userController = {
 
             //Check for existing user
             const user = await User.findOne({email});
-            !user && res.status(400).json({message: 'User not found!'});
+            !user && res.status(400).json({message: 'User not found!'});  
              
             //Validate password
             const isValidPassword =  await bcrypt.compare(password , user.password);
